@@ -30,13 +30,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        init();
         list= new ArrayList<>();
         countrydata.setText(Country);
         if(getIntent().getStringExtra("country") !=null)
         {
             Country = getIntent().getStringExtra("country");
         }
-        init();
+
         countrydata.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
